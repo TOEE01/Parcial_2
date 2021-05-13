@@ -118,7 +118,7 @@ namespace AppVentas
             this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(-2, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(599, 343);
+            this.panel1.Size = new System.Drawing.Size(600, 347);
             this.panel1.TabIndex = 6;
             // 
             // FrmLogin
