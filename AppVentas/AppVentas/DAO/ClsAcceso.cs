@@ -14,7 +14,7 @@ namespace AppVentas.DAO
         {
             Boolean variableAcceso = false;
             //traer la conexio a la BDD
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 var consulta = from user in db.tb_usuario
                                where user.email == usuario && user.contrasena == pass
@@ -32,7 +32,7 @@ namespace AppVentas.DAO
         {
             Boolean variableAcceso = false;
             //traer la conexio a la BDD
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 var consulta = from user in db.tb_usuario
                                where user.email == usuario
@@ -49,7 +49,7 @@ namespace AppVentas.DAO
         {
             Boolean variableAcceso = false;
             //traer la conexio a la BDD
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 var consulta = from user in db.tb_usuario
                                where user.contrasena == pass && user.email == correo

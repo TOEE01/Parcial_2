@@ -12,7 +12,7 @@ namespace AppVentas.DAO
     {
         public void GuardarCliente(tb_cliente vCliente)
         {
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 tb_cliente dbCliente = new tb_cliente();
                 dbCliente.nombreCliente = vCliente.nombreCliente;
@@ -29,7 +29,7 @@ namespace AppVentas.DAO
         {
             try
             {
-                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                 {
                     int actualizar = vCliente.iDCliente;                                       
                     tb_cliente dbCliente = db.tb_cliente.Where(x => x.iDCliente == actualizar).Select(x => x).FirstOrDefault();
@@ -51,7 +51,7 @@ namespace AppVentas.DAO
         {
             try
             {
-                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                 {
                     int idBorrar = Id;
                     tb_cliente cliente = db.tb_cliente.Where(x => x.iDCliente == idBorrar).Select(x => x).FirstOrDefault();

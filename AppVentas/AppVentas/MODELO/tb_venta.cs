@@ -24,7 +24,6 @@ namespace AppVentas.MODELO
         public Nullable<int> iDDocumento { get; set; }
         public Nullable<int> iDCliente { get; set; }
         public Nullable<int> iDUsuario { get; set; }
-        public Nullable<int> iDProducto { get; set; }
         public Nullable<decimal> totalVenta { get; set; }
         public Nullable<System.DateTime> fecha { get; set; }
     

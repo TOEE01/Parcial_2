@@ -14,7 +14,7 @@ namespace AppVentas.DAO
         {
             try
             {
-                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                 {
                     tb_documento DBDocumento = new tb_documento();
                     DBDocumento.nombreDocumento = VDocumento.nombreDocumento;
@@ -35,7 +35,7 @@ namespace AppVentas.DAO
         {
             try
             {
-                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                 {
                     int actualizar = VDocumento.iDDocumento;
                     tb_documento DBDocumento = db.tb_documento.Where(x => x.iDDocumento == actualizar).Select(x => x).FirstOrDefault();
@@ -54,7 +54,7 @@ namespace AppVentas.DAO
         {
             try
             {
-                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                 {
                     int eliminar = Id;
                     tb_documento DBDocumento = db.tb_documento.Where(x => x.iDDocumento == eliminar).Select(x => x).FirstOrDefault();

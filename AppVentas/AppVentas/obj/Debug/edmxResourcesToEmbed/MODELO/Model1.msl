@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="sistema_ventasModelStoreContainer" CdmEntityContainer="sistema_ventasEntities">
+  <EntityContainerMapping StorageEntityContainer="sistema_ventasModelStoreContainer" CdmEntityContainer="sistema_ventasEntities1">
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="sistema_ventasModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -26,8 +26,8 @@
       <EntityTypeMapping TypeName="sistema_ventasModel.tb_detalleVenta">
         <MappingFragment StoreEntitySet="tb_detalleVenta">
           <ScalarProperty Name="iDDetalleVenta" ColumnName="iDDetalleVenta" />
-          <ScalarProperty Name="idVenta" ColumnName="idVenta" />
-          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="iDVenta" ColumnName="iDVenta" />
+          <ScalarProperty Name="iDProducto" ColumnName="iDProducto" />
           <ScalarProperty Name="cantidad" ColumnName="cantidad" />
           <ScalarProperty Name="precio" ColumnName="precio" />
           <ScalarProperty Name="total" ColumnName="total" />
@@ -68,7 +68,6 @@
           <ScalarProperty Name="iDDocumento" ColumnName="iDDocumento" />
           <ScalarProperty Name="iDCliente" ColumnName="iDCliente" />
           <ScalarProperty Name="iDUsuario" ColumnName="iDUsuario" />
-          <ScalarProperty Name="iDProducto" ColumnName="iDProducto" />
           <ScalarProperty Name="totalVenta" ColumnName="totalVenta" />
           <ScalarProperty Name="fecha" ColumnName="fecha" />
         </MappingFragment>

@@ -14,7 +14,7 @@ namespace AppVentas.DAO
         {
             try
             {
-                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                 {
                     tb_usuario dbUsuario = new tb_usuario();
                     dbUsuario.email = vUsuario.email;

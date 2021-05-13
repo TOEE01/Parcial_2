@@ -41,16 +41,16 @@ namespace AppVentas.VISTA
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDoc)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgDoc
@@ -58,6 +58,7 @@ namespace AppVentas.VISTA
             this.dtgDoc.AllowUserToAddRows = false;
             this.dtgDoc.AllowUserToDeleteRows = false;
             this.dtgDoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgDoc.BackgroundColor = System.Drawing.Color.Plum;
             this.dtgDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -86,8 +87,10 @@ namespace AppVentas.VISTA
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.MediumPurple;
             this.panel4.Controls.Add(this.dtgDoc);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(0, 197);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(20);
@@ -96,10 +99,10 @@ namespace AppVentas.VISTA
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(90, 57);
+            this.txtDocumento.Location = new System.Drawing.Point(107, 57);
             this.txtDocumento.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(338, 20);
+            this.txtDocumento.Size = new System.Drawing.Size(338, 26);
             this.txtDocumento.TabIndex = 5;
             // 
             // label3
@@ -107,7 +110,7 @@ namespace AppVentas.VISTA
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(19, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.Size = new System.Drawing.Size(92, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Documento:";
             // 
@@ -135,10 +138,12 @@ namespace AppVentas.VISTA
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.MediumPurple;
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.btnActualizar);
             this.panel3.Controls.Add(this.btnAgregar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(642, 197);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
@@ -158,9 +163,11 @@ namespace AppVentas.VISTA
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.MediumPurple;
             this.panel5.Controls.Add(this.txtDocumento);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel5.Location = new System.Drawing.Point(194, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(448, 151);
@@ -168,6 +175,7 @@ namespace AppVentas.VISTA
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.MediumPurple;
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -177,26 +185,9 @@ namespace AppVentas.VISTA
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(336, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DOCUMENTOS";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(745, 46);
-            this.panel1.TabIndex = 4;
-            // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.MediumPurple;
             this.pictureBox1.BackgroundImage = global::AppVentas.Properties.Resources.document;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -206,6 +197,26 @@ namespace AppVentas.VISTA
             this.pictureBox1.Size = new System.Drawing.Size(194, 151);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(336, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "DOCUMENTOS";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Plum;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(745, 46);
+            this.panel1.TabIndex = 4;
             // 
             // FrmDocumentos
             // 
@@ -226,9 +237,9 @@ namespace AppVentas.VISTA
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

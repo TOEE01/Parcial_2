@@ -25,7 +25,7 @@ namespace AppVentas.VISTA
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ClsDProductos VProductos = new ClsDProductos();
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 tb_producto producto = new tb_producto();
                 producto.nombreProducto = txtProducto.Text;
@@ -39,7 +39,7 @@ namespace AppVentas.VISTA
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             ClsDProductos VProductos = new ClsDProductos();
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 tb_producto producto = new tb_producto();
                 producto.idProducto = Convert.ToInt32(dtgProductos.CurrentRow.Cells[0].Value.ToString());
@@ -54,7 +54,7 @@ namespace AppVentas.VISTA
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             ClsDProductos VProductos = new ClsDProductos();
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 VProductos.EliminarProducto(Convert.ToInt32(dtgProductos.CurrentRow.Cells[0].Value.ToString()));
                 load();
@@ -64,7 +64,7 @@ namespace AppVentas.VISTA
         private void load()
         {
             dtgProductos.Rows.Clear();
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 var consulta = (from a in db.tb_producto
                                 select a).ToList();

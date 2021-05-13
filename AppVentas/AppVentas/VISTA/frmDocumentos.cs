@@ -27,7 +27,7 @@ namespace AppVentas.VISTA
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 ClsDDocumentos VDocumentos = new ClsDDocumentos();
                 tb_documento Documento = new tb_documento();
@@ -40,7 +40,7 @@ namespace AppVentas.VISTA
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 ClsDDocumentos VDocumentos = new ClsDDocumentos();
                 tb_documento Documento = new tb_documento();
@@ -62,7 +62,7 @@ namespace AppVentas.VISTA
         private void load()
         {
             dtgDoc.Rows.Clear();
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 var consulta = (from a in db.tb_documento
                                 select a).ToList();

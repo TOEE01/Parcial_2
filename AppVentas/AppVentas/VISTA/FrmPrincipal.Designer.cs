@@ -33,8 +33,8 @@ namespace AppVentas.VISTA
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnActividad = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@ namespace AppVentas.VISTA
             // 
             // pnlUsuarioIngresado
             // 
-            this.pnlUsuarioIngresado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(56)))), ((int)(((byte)(89)))));
+            this.pnlUsuarioIngresado.BackColor = System.Drawing.Color.Plum;
             this.pnlUsuarioIngresado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUsuarioIngresado.Location = new System.Drawing.Point(0, 0);
             this.pnlUsuarioIngresado.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -66,7 +66,7 @@ namespace AppVentas.VISTA
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(159)))), ((int)(((byte)(191)))));
+            this.panel5.BackColor = System.Drawing.Color.Plum;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
@@ -75,7 +75,7 @@ namespace AppVentas.VISTA
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(170)))), ((int)(((byte)(191)))));
+            this.panel3.BackColor = System.Drawing.Color.Plum;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -96,18 +96,6 @@ namespace AppVentas.VISTA
             this.panel4.Size = new System.Drawing.Size(250, 21);
             this.panel4.TabIndex = 4;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Usuario:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -120,9 +108,21 @@ namespace AppVentas.VISTA
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuario ingresado";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Usuario:";
+            // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(159)))), ((int)(((byte)(191)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.Plum;
             this.pnlMenu.Controls.Add(this.btnActividad);
             this.pnlMenu.Controls.Add(this.btnUsuarios);
             this.pnlMenu.Controls.Add(this.btnDocumentos);
@@ -139,6 +139,7 @@ namespace AppVentas.VISTA
             // 
             // btnActividad
             // 
+            this.btnActividad.BackColor = System.Drawing.Color.Plum;
             this.btnActividad.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnActividad.FlatAppearance.BorderSize = 0;
             this.btnActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -151,11 +152,12 @@ namespace AppVentas.VISTA
             this.btnActividad.TabIndex = 12;
             this.btnActividad.Text = "Actividad";
             this.btnActividad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnActividad.UseVisualStyleBackColor = true;
+            this.btnActividad.UseVisualStyleBackColor = false;
             this.btnActividad.Click += new System.EventHandler(this.btnActividad_Click);
             // 
             // btnUsuarios
             // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.Plum;
             this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUsuarios.FlatAppearance.BorderSize = 0;
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -168,11 +170,12 @@ namespace AppVentas.VISTA
             this.btnUsuarios.TabIndex = 11;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnDocumentos
             // 
+            this.btnDocumentos.BackColor = System.Drawing.Color.Plum;
             this.btnDocumentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDocumentos.FlatAppearance.BorderSize = 0;
             this.btnDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -186,11 +189,12 @@ namespace AppVentas.VISTA
             this.btnDocumentos.Text = "Documentos";
             this.btnDocumentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDocumentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDocumentos.UseVisualStyleBackColor = true;
+            this.btnDocumentos.UseVisualStyleBackColor = false;
             this.btnDocumentos.Click += new System.EventHandler(this.btnDocumentos_Click);
             // 
             // btnVentas
             // 
+            this.btnVentas.BackColor = System.Drawing.Color.Plum;
             this.btnVentas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVentas.FlatAppearance.BorderSize = 0;
             this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -203,11 +207,12 @@ namespace AppVentas.VISTA
             this.btnVentas.TabIndex = 8;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.UseVisualStyleBackColor = false;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnProductos
             // 
+            this.btnProductos.BackColor = System.Drawing.Color.Plum;
             this.btnProductos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProductos.FlatAppearance.BorderSize = 0;
             this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -221,12 +226,12 @@ namespace AppVentas.VISTA
             this.btnProductos.Text = "Productos";
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnClientes
             // 
-            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(159)))), ((int)(((byte)(191)))));
+            this.btnClientes.BackColor = System.Drawing.Color.Plum;
             this.btnClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnClientes.FlatAppearance.BorderSize = 0;
@@ -245,6 +250,7 @@ namespace AppVentas.VISTA
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Plum;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::AppVentas.Properties.Resources.tiendas;
@@ -260,7 +266,7 @@ namespace AppVentas.VISTA
             // 
             // pnlPadre
             // 
-            this.pnlPadre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(208)))), ((int)(((byte)(107)))));
+            this.pnlPadre.BackColor = System.Drawing.Color.MediumPurple;
             this.pnlPadre.Controls.Add(this.pictureBox2);
             this.pnlPadre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPadre.Location = new System.Drawing.Point(160, 47);

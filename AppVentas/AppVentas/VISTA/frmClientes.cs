@@ -37,7 +37,7 @@ namespace AppVentas.VISTA
         private void load()
         {
             dtgClientes.Rows.Clear();
-            using (sistema_ventasEntities db= new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db= new sistema_ventasEntities1())
             {
                 var consulta = ( from a in db.tb_cliente
                                  select a
@@ -59,7 +59,7 @@ namespace AppVentas.VISTA
             else
             {
                 ClsDClientes clsDClientes = new ClsDClientes();
-                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                 {
                     tb_cliente cliente = new tb_cliente();
                     cliente.nombreCliente = txtNombre.Text;
@@ -75,7 +75,7 @@ namespace AppVentas.VISTA
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             ClsDClientes clsDClientes = new ClsDClientes();
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 tb_cliente cliente = new tb_cliente();
                 cliente.nombreCliente = txtNombre.Text;

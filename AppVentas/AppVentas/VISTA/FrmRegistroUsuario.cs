@@ -26,7 +26,7 @@ namespace AppVentas.VISTA
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 ClsAcceso acceso = new ClsAcceso();
 

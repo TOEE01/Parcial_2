@@ -13,10 +13,10 @@ namespace AppVentas.MODELO
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class sistema_ventasEntities : DbContext
+    public partial class sistema_ventasEntities1 : DbContext
     {
-        public sistema_ventasEntities()
-            : base("name=sistema_ventasEntities")
+        public sistema_ventasEntities1()
+            : base("name=sistema_ventasEntities1")
         {
         }
     

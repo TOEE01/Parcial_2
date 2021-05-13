@@ -42,7 +42,7 @@ namespace AppVentas.VISTA
                 }
                 else
                 {
-                    using (sistema_ventasEntities db = new sistema_ventasEntities())
+                    using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                     {
                         tb_usuario usuario = new tb_usuario();
                         usuario.email = txtCorreo.Text;
@@ -69,7 +69,7 @@ namespace AppVentas.VISTA
 
                 if (acceso.VerificarPass(txtPassAntigua.Text, correoS) == true)
                 {
-                    using (sistema_ventasEntities db = new sistema_ventasEntities())
+                    using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                     {
                         tb_usuario usuario = new tb_usuario();
                         usuario.iDUsuario = Convert.ToInt32(dtgUsuarios.CurrentRow.Cells[0].Value.ToString());
@@ -89,7 +89,7 @@ namespace AppVentas.VISTA
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 ClsDUsuarios Vusuario = new ClsDUsuarios();
                 Vusuario.EliminarUsuario(Convert.ToInt32(dtgUsuarios.CurrentRow.Cells[0].Value.ToString()));
@@ -100,7 +100,7 @@ namespace AppVentas.VISTA
         private void load()
         {
             dtgUsuarios.Rows.Clear();
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 var consulta = (from a in db.tb_usuario
                                 select a).ToList();

@@ -14,7 +14,7 @@ namespace AppVentas.DAO
         {
             try
             {
-                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                 {
                     tb_usuario Busuario = new tb_usuario();
                     Busuario.email = Vusuario.email;
@@ -34,7 +34,7 @@ namespace AppVentas.DAO
         {
             try
             {
-                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                 {
                     int actualizar = Vusuario.iDUsuario;
                     tb_usuario Busuario = db.tb_usuario.Where(x => x.iDUsuario == actualizar).Select(x => x).FirstOrDefault();
@@ -56,7 +56,7 @@ namespace AppVentas.DAO
         {
             try
             {
-                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
                 {
                     int eliminar = Id;
                     tb_usuario Busuario = db.tb_usuario.Where(x => x.iDUsuario == eliminar).Select(x => x).FirstOrDefault();

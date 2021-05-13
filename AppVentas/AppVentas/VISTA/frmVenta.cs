@@ -25,7 +25,7 @@ namespace AppVentas.VISTA
 
         private void FrmVenta_Load(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
             {
                 var consulta = db.tb_cliente.ToList();
                 cbCliente.DataSource = consulta;

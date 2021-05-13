@@ -15,8 +15,8 @@ namespace AppVentas.MODELO
     public partial class tb_detalleVenta
     {
         public int iDDetalleVenta { get; set; }
-        public Nullable<int> idVenta { get; set; }
-        public Nullable<int> idProducto { get; set; }
+        public Nullable<int> iDVenta { get; set; }
+        public Nullable<int> iDProducto { get; set; }
         public Nullable<int> cantidad { get; set; }
         public Nullable<decimal> precio { get; set; }
         public Nullable<decimal> total { get; set; }
