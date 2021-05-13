@@ -1,0 +1,44 @@
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\bin\Debug\AppVentas.exe.config
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\bin\Debug\AppVentas.exe
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\bin\Debug\AppVentas.pdb
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\bin\Debug\EntityFramework.dll
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\bin\Debug\EntityFramework.xml
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.csprojAssemblyReference.cache
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.Properties.Resources.resources
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.csproj.GenerateResource.cache
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.csproj.CoreCompileInputs.cache
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.csproj.CopyComplete
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.exe
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.pdb
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmVenta.resources
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.FrmLogin.resources
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmRegistroUsuario.resources
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmPrincipal.resources
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmClientes.resources
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmDocumentos.resources
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmProductos.resources
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmUsuarios.resources
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\bin\Debug\AppVentas.exe.config
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\bin\Debug\AppVentas.exe
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\bin\Debug\AppVentas.pdb
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\bin\Debug\EntityFramework.dll
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\bin\Debug\EntityFramework.xml
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.csprojAssemblyReference.cache
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmUsuarios.resources
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmClientes.resources
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmDocumentos.resources
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.FrmLogin.resources
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.Properties.Resources.resources
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmPrincipal.resources
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmProductos.resources
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmRegistroUsuario.resources
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmVenta.resources
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.csproj.GenerateResource.cache
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.csproj.CoreCompileInputs.cache
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.csproj.CopyComplete
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.exe
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.pdb
