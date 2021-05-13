@@ -45,19 +45,19 @@ namespace AppVentas.VISTA
             this.label = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgProductos
@@ -65,6 +65,7 @@ namespace AppVentas.VISTA
             this.dtgProductos.AllowUserToAddRows = false;
             this.dtgProductos.AllowUserToDeleteRows = false;
             this.dtgProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgProductos.BackgroundColor = System.Drawing.Color.Plum;
             this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -110,8 +111,10 @@ namespace AppVentas.VISTA
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.MediumPurple;
             this.panel4.Controls.Add(this.dtgProductos);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(0, 197);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(20);
@@ -123,7 +126,7 @@ namespace AppVentas.VISTA
             this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEliminar.Location = new System.Drawing.Point(0, 100);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(93, 50);
+            this.btnEliminar.Size = new System.Drawing.Size(93, 52);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -153,10 +156,12 @@ namespace AppVentas.VISTA
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.MediumPurple;
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.btnActualizar);
             this.panel3.Controls.Add(this.btnAgregar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(642, 197);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
@@ -165,9 +170,9 @@ namespace AppVentas.VISTA
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(77, 100);
+            this.txtEstado.Location = new System.Drawing.Point(92, 100);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(336, 20);
+            this.txtEstado.Size = new System.Drawing.Size(336, 26);
             this.txtEstado.TabIndex = 7;
             // 
             // label4
@@ -175,16 +180,16 @@ namespace AppVentas.VISTA
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(19, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "Estado:";
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(77, 57);
+            this.txtPrecio.Location = new System.Drawing.Point(92, 57);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(336, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(336, 26);
             this.txtPrecio.TabIndex = 5;
             // 
             // label
@@ -192,29 +197,41 @@ namespace AppVentas.VISTA
             this.label.AutoSize = true;
             this.label.Location = new System.Drawing.Point(19, 60);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(40, 13);
+            this.label.Size = new System.Drawing.Size(58, 18);
             this.label.TabIndex = 4;
             this.label.Text = "Precio:";
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(77, 18);
+            this.txtProducto.Location = new System.Drawing.Point(92, 18);
             this.txtProducto.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(336, 20);
+            this.txtProducto.Size = new System.Drawing.Size(336, 26);
             this.txtProducto.TabIndex = 3;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.MediumPurple;
             this.panel2.Controls.Add(this.btnLimpiar);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.panel2.Size = new System.Drawing.Size(745, 151);
             this.panel2.TabIndex = 5;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLimpiar.Location = new System.Drawing.Point(642, 0);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(93, 32);
+            this.btnLimpiar.TabIndex = 2;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -235,37 +252,9 @@ namespace AppVentas.VISTA
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(68, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(305, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CONTROL DE INVENTARIO";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(745, 46);
-            this.panel1.TabIndex = 4;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLimpiar.Location = new System.Drawing.Point(642, 0);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(93, 23);
-            this.btnLimpiar.TabIndex = 2;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -278,6 +267,26 @@ namespace AppVentas.VISTA
             this.pictureBox1.Size = new System.Drawing.Size(194, 151);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(305, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(206, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CONTROL DE INVENTARIO";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Plum;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(745, 46);
+            this.panel1.TabIndex = 4;
             // 
             // FrmProductos
             // 
@@ -297,9 +306,9 @@ namespace AppVentas.VISTA
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

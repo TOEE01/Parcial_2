@@ -48,18 +48,18 @@ namespace AppVentas.VISTA
             this.txtPassAntigua = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgUsuarios
@@ -67,6 +67,7 @@ namespace AppVentas.VISTA
             this.dtgUsuarios.AllowUserToAddRows = false;
             this.dtgUsuarios.AllowUserToDeleteRows = false;
             this.dtgUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgUsuarios.BackgroundColor = System.Drawing.Color.Plum;
             this.dtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -77,7 +78,7 @@ namespace AppVentas.VISTA
             this.dtgUsuarios.Name = "dtgUsuarios";
             this.dtgUsuarios.ReadOnly = true;
             this.dtgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgUsuarios.Size = new System.Drawing.Size(602, 281);
+            this.dtgUsuarios.Size = new System.Drawing.Size(608, 281);
             this.dtgUsuarios.TabIndex = 0;
             this.dtgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuarios_CellClick);
             // 
@@ -104,21 +105,23 @@ namespace AppVentas.VISTA
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.MediumPurple;
             this.panel4.Controls.Add(this.dtgUsuarios);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(0, 197);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(20);
-            this.panel4.Size = new System.Drawing.Size(642, 321);
+            this.panel4.Size = new System.Drawing.Size(648, 321);
             this.panel4.TabIndex = 7;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(89, 57);
+            this.txtPass.Location = new System.Drawing.Point(118, 57);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(324, 20);
+            this.txtPass.Size = new System.Drawing.Size(324, 26);
             this.txtPass.TabIndex = 5;
             // 
             // label3
@@ -126,16 +129,16 @@ namespace AppVentas.VISTA
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(19, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.Size = new System.Drawing.Size(93, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Contraseña:";
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(89, 18);
+            this.txtCorreo.Location = new System.Drawing.Point(118, 18);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(324, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(324, 26);
             this.txtCorreo.TabIndex = 3;
             // 
             // btnActualizar
@@ -143,7 +146,7 @@ namespace AppVentas.VISTA
             this.btnActualizar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnActualizar.Location = new System.Drawing.Point(0, 70);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(93, 50);
+            this.btnActualizar.Size = new System.Drawing.Size(87, 50);
             this.btnActualizar.TabIndex = 1;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -154,7 +157,7 @@ namespace AppVentas.VISTA
             this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgregar.Location = new System.Drawing.Point(0, 20);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(93, 50);
+            this.btnAgregar.Size = new System.Drawing.Size(87, 50);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -165,20 +168,22 @@ namespace AppVentas.VISTA
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(57, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "E-mail:";
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.MediumPurple;
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.btnActualizar);
             this.panel3.Controls.Add(this.btnAgregar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(642, 197);
+            this.panel3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(648, 197);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
-            this.panel3.Size = new System.Drawing.Size(103, 321);
+            this.panel3.Size = new System.Drawing.Size(97, 321);
             this.panel3.TabIndex = 6;
             // 
             // btnEliminar
@@ -186,7 +191,7 @@ namespace AppVentas.VISTA
             this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEliminar.Location = new System.Drawing.Point(0, 120);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(93, 50);
+            this.btnEliminar.Size = new System.Drawing.Size(87, 50);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -202,9 +207,9 @@ namespace AppVentas.VISTA
             this.panel5.Controls.Add(this.txtCorreo);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(194, 0);
+            this.panel5.Location = new System.Drawing.Point(118, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(448, 151);
+            this.panel5.Size = new System.Drawing.Size(501, 151);
             this.panel5.TabIndex = 1;
             // 
             // label5
@@ -212,7 +217,7 @@ namespace AppVentas.VISTA
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 97);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(326, 13);
+            this.label5.Size = new System.Drawing.Size(483, 18);
             this.label5.TabIndex = 8;
             this.label5.Text = "Ingrese su antigua contraseña para modificar y eliminar los registros:";
             // 
@@ -224,17 +229,17 @@ namespace AppVentas.VISTA
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 98);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(446, 51);
+            this.panel6.Size = new System.Drawing.Size(499, 51);
             this.panel6.TabIndex = 6;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // txtPassAntigua
             // 
-            this.txtPassAntigua.Location = new System.Drawing.Point(88, 17);
+            this.txtPassAntigua.Location = new System.Drawing.Point(117, 17);
             this.txtPassAntigua.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.txtPassAntigua.Name = "txtPassAntigua";
             this.txtPassAntigua.PasswordChar = '*';
-            this.txtPassAntigua.Size = new System.Drawing.Size(324, 20);
+            this.txtPassAntigua.Size = new System.Drawing.Size(324, 26);
             this.txtPassAntigua.TabIndex = 7;
             // 
             // label4
@@ -242,39 +247,34 @@ namespace AppVentas.VISTA
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(18, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.Size = new System.Drawing.Size(93, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "Contraseña:";
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.MediumPurple;
             this.panel2.Controls.Add(this.btnLimpiar);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.panel2.Size = new System.Drawing.Size(745, 151);
             this.panel2.TabIndex = 5;
             // 
-            // label1
+            // btnLimpiar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(305, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "GESTIÓN DE USUARIOS";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(745, 46);
-            this.panel1.TabIndex = 4;
+            this.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLimpiar.Location = new System.Drawing.Point(619, 0);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnLimpiar.Size = new System.Drawing.Size(116, 40);
+            this.btnLimpiar.TabIndex = 2;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -284,20 +284,29 @@ namespace AppVentas.VISTA
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(20);
-            this.pictureBox1.Size = new System.Drawing.Size(194, 151);
+            this.pictureBox1.Size = new System.Drawing.Size(118, 151);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnLimpiar
+            // label1
             // 
-            this.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLimpiar.Location = new System.Drawing.Point(642, 0);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnLimpiar.Size = new System.Drawing.Size(93, 23);
-            this.btnLimpiar.TabIndex = 2;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(305, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(189, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "GESTIÓN DE USUARIOS";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Plum;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(745, 46);
+            this.panel1.TabIndex = 4;
             // 
             // FrmUsuarios
             // 
@@ -319,9 +328,9 @@ namespace AppVentas.VISTA
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

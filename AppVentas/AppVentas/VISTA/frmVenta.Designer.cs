@@ -103,6 +103,7 @@ namespace AppVentas.VISTA
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Plum;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 230);
             this.dataGridView1.Name = "dataGridView1";
@@ -202,6 +203,7 @@ namespace AppVentas.VISTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(744, 518);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
