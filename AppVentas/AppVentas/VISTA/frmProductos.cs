@@ -22,6 +22,8 @@ namespace AppVentas.VISTA
 
         }
 
+        
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ClsDProductos VProductos = new ClsDProductos();
@@ -76,13 +78,56 @@ namespace AppVentas.VISTA
         }
         private void dtgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string producto = dtgProductos.CurrentRow.Cells[1].Value.ToString();
+            string id = dtgProductos.CurrentRow.Cells[0].Value.ToString();
+            string Nombre = dtgProductos.CurrentRow.Cells[1].Value.ToString();
             string precio = dtgProductos.CurrentRow.Cells[2].Value.ToString();
-            string estado = dtgProductos.CurrentRow.Cells[3].Value.ToString();
 
-            txtProducto.Text = producto;
-            txtPrecio.Text = precio;
-            txtEstado.Text = estado;
+
+            //txtProducto.Text = producto;
+            //txtPrecio.Text = precio;
+            //txtEstado.Text = estado;
+
+            FrmMenuVenta.FrmVenta.txtCodigoProducto.Text = id;
+            FrmMenuVenta.FrmVenta.txtNombreProducto.Text = Nombre;
+            FrmMenuVenta.FrmVenta.txtPrecio.Text = precio;
+            
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtProducto.Clear();
+            txtPrecio.Clear();
+            txtEstado.Clear();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximizar.Visible = false;
+            btnNormal.Visible = true;
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnNormal_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnNormal.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

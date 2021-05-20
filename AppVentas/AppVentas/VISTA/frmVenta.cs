@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppVentas.DAO;
 using AppVentas.MODELO;
 
 namespace AppVentas.VISTA
@@ -25,24 +26,33 @@ namespace AppVentas.VISTA
 
         private void FrmVenta_Load(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
+            ClsDClientes cls = new ClsDClientes();
+
+            cbCliente.DataSource = cls.MostrarCliente();
+            cbCliente.DisplayMember = "nombreCliente";
+            cbCliente.ValueMember = "iDCliente";
+
+            if (cbCliente.Items.Count > 0)
             {
-                var consulta = db.tb_cliente.ToList();
-                cbCliente.DataSource = consulta;
-                cbCliente.DisplayMember = "nombreCliente";
-                cbCliente.ValueMember = "iDCliente";
+                cbCliente.SelectedIndex = -1;
+            }
 
-                //if (cbCliente.Items.Count > 0)
-                //{
-                //    cbCliente.SelectedIndex = -1;
-                //}
-
-                var consultaDoc = db.tb_documento.ToList();
-                cbTipoDocumento.DataSource = consultaDoc;
+            ClsDDocumentos clsD = new ClsDDocumentos();
+            cbTipoDocumento.DataSource = clsD.MostrarDocumento();
                 cbTipoDocumento.DisplayMember = "nombreDocumento";
                 cbTipoDocumento.ValueMember = "iDDocumento";
-                
+            if (cbTipoDocumento.Items.Count > 0)
+            {
+                cbTipoDocumento.SelectedIndex = -1;
             }
+                
+            
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            FrmProductos buscar = new FrmProductos();
+            buscar.Show();
         }
     }
 }

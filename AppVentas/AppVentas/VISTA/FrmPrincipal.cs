@@ -19,6 +19,8 @@ namespace AppVentas.VISTA
         }
         public string usu;
 
+        public static FrmVenta FrmVenta = new FrmVenta();
+
         public void DesactivarResaltado()
         {
             //verificando que el boton actual sea diferente de nulo
@@ -170,5 +172,7 @@ namespace AppVentas.VISTA
         {
 
         }
+
+
     }
 }

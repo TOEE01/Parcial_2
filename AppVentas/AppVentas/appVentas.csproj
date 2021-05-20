@@ -98,6 +98,12 @@
     <Compile Include="MODELO\tb_venta.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmMenuVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmMenuVenta.Designer.cs">
+      <DependentUpon>FrmMenuVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <Compile Include="VISTA\FrmVenta.Designer.cs">
       <DependentUpon>FrmVenta.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VISTA\FrmMenuVenta.resx">
+      <DependentUpon>FrmMenuVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +242,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\squares.png" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\61155.png" />
+    <None Include="Resources\32763.png" />
+    <None Include="Resources\descarga.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

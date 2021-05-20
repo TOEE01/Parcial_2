@@ -67,5 +67,16 @@ namespace AppVentas.DAO
             }
         }
 
+
+        public List<tb_cliente> MostrarCliente()
+        {
+            List<tb_cliente> tb_Clientes = new List<tb_cliente>();
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
+            {
+                tb_Clientes = db.tb_cliente.ToList();
+            }
+
+                return tb_Clientes;
+        }
     }
 }

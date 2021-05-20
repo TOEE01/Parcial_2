@@ -86,3 +86,4 @@ C:\Users\recin\Documents\GitHub\Parcial_2\AppVentas\AppVentas\obj\Debug\AppVenta
 C:\Users\recin\Documents\GitHub\Parcial_2\AppVentas\AppVentas\obj\Debug\AppVentas.csproj.CopyComplete
 C:\Users\recin\Documents\GitHub\Parcial_2\AppVentas\AppVentas\obj\Debug\AppVentas.exe
 C:\Users\recin\Documents\GitHub\Parcial_2\AppVentas\AppVentas\obj\Debug\AppVentas.pdb
+C:\Users\recin\Documents\GitHub\Parcial_2\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmMenuVenta.resources
