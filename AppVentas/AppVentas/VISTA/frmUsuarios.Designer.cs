@@ -317,7 +317,7 @@ namespace AppVentas.VISTA
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmUsuarios";
             this.Text = "ClsDUsuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).EndInit();

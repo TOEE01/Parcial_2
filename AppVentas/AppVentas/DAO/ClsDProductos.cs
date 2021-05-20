@@ -70,6 +70,20 @@ namespace AppVentas.DAO
                 MessageBox.Show(ex.ToString());
                 throw;
             }
+
         }
+        public List<tb_producto> MostrarProducto(String filtro)
+        {
+            List<tb_producto> tb_Productos = new List<tb_producto>();
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
+            {
+                tb_Productos = (from listadoProductos in db.tb_producto
+                                where listadoProductos.nombreProducto.Contains(filtro)
+                                select listadoProductos).ToList();
+            }
+
+            return tb_Productos;
+        }
+
     }
 }

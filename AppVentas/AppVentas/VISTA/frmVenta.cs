@@ -23,9 +23,22 @@ namespace AppVentas.VISTA
         {
 
         }
+        void UltimoCorrelativoDeVenta()
+        {
+            var consultar = new ClsDVenta();
 
+            int lista = 0;
+
+            foreach (var list in consultar.UltimaVenta()) {
+                lista = list.iDVenta;
+            }
+            lista++;
+            txtVenta.Text = lista.ToString();
+        }
         private void FrmVenta_Load(object sender, EventArgs e)
         {
+            UltimoCorrelativoDeVenta();
+            
             ClsDClientes cls = new ClsDClientes();
 
             cbCliente.DataSource = cls.MostrarCliente();
@@ -53,6 +66,73 @@ namespace AppVentas.VISTA
         {
             FrmProductos buscar = new FrmProductos();
             buscar.Show();
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            try {
+                Double precio, cantida, total;
+                cantida = Convert.ToDouble(txtCantidad.Text);
+                precio = Convert.ToDouble(txtPrecio.Text);
+
+                total = precio * cantida;
+
+                txtTotal.Text = total.ToString();
+
+
+            }
+            catch (Exception ex)
+            {
+                if (txtCantidad.Text.Equals(""))
+                {
+                    txtCantidad.Text = "0";
+                    txtCantidad.SelectAll();
+                }
+            }
+         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            
+            Double suma = 0;
+            dtgVenta.Rows.Add(txtId.Text, txtNombreProducto.Text,txtPrecio.Text,txtCantidad.Text,txtTotal.Text);
+                
+
+            for (int i= 0;i<dtgVenta.Rows.Count; i++)
+            {
+                String datosAOperarTotal = dtgVenta.Rows[i].Cells[4].Value.ToString();
+
+                Double DatosConvertidos = Convert.ToDouble(datosAOperarTotal);
+
+                //variable de acarreo
+                
+                suma += DatosConvertidos;
+
+                txtTotalFinal.Text = suma.ToString();
+                
+                
+                txtId.Clear();
+                txtNombreProducto.Clear();
+                txtPrecio.Clear();
+                txtCantidad.Clear();
+                txtTotal.Clear();
+
+            }
+        }
+
+        private void txtTotalFinal_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

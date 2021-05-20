@@ -51,10 +51,7 @@ namespace AppVentas.VISTA
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnNormal = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnMaximizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,10 +59,6 @@ namespace AppVentas.VISTA
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgProductos
@@ -88,6 +81,9 @@ namespace AppVentas.VISTA
             this.dtgProductos.Size = new System.Drawing.Size(602, 281);
             this.dtgProductos.TabIndex = 0;
             this.dtgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellClick);
+            this.dtgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellContentClick);
+            this.dtgProductos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellContentDoubleClick);
+            this.dtgProductos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgProductos_KeyDown);
             // 
             // Column1
             // 
@@ -188,9 +184,9 @@ namespace AppVentas.VISTA
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(19, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 18);
+            this.label4.Size = new System.Drawing.Size(24, 18);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Estado:";
+            this.label4.Text = "Id:";
             // 
             // txtPrecio
             // 
@@ -280,20 +276,17 @@ namespace AppVentas.VISTA
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(305, 18);
+            this.label1.Location = new System.Drawing.Point(26, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 18);
+            this.label1.Size = new System.Drawing.Size(124, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "CONTROL DE INVENTARIO";
+            this.label1.Text = "Buscar Producto";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Plum;
-            this.panel1.Controls.Add(this.btnNormal);
+            this.panel1.Controls.Add(this.txtBuscarProducto);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnMinimizar);
-            this.panel1.Controls.Add(this.btnCerrar);
-            this.panel1.Controls.Add(this.btnMaximizar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -302,54 +295,13 @@ namespace AppVentas.VISTA
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // btnNormal
+            // txtBuscarProducto
             // 
-            this.btnNormal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNormal.Image = global::AppVentas.Properties.Resources.squares;
-            this.btnNormal.Location = new System.Drawing.Point(686, 3);
-            this.btnNormal.Name = "btnNormal";
-            this.btnNormal.Size = new System.Drawing.Size(25, 25);
-            this.btnNormal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNormal.TabIndex = 11;
-            this.btnNormal.TabStop = false;
-            this.btnNormal.Visible = false;
-            this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.Image = global::AppVentas.Properties.Resources.minimize;
-            this.btnMinimizar.Location = new System.Drawing.Point(655, 3);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 10;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.Image = global::AppVentas.Properties.Resources._32763;
-            this.btnMaximizar.Location = new System.Drawing.Point(686, 3);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
-            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMaximizar.TabIndex = 9;
-            this.btnMaximizar.TabStop = false;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.Image = global::AppVentas.Properties.Resources._61155;
-            this.btnCerrar.Location = new System.Drawing.Point(717, 3);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 8;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.txtBuscarProducto.Location = new System.Drawing.Point(194, 9);
+            this.txtBuscarProducto.Name = "txtBuscarProducto";
+            this.txtBuscarProducto.Size = new System.Drawing.Size(322, 26);
+            this.txtBuscarProducto.TabIndex = 1;
+            this.txtBuscarProducto.TextChanged += new System.EventHandler(this.txtBuscarProducto_TextChanged);
             // 
             // FrmProductos
             // 
@@ -360,9 +312,10 @@ namespace AppVentas.VISTA
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmProductos";
             this.Text = "FrmProductos";
+            this.Load += new System.EventHandler(this.FrmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -372,10 +325,6 @@ namespace AppVentas.VISTA
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,16 +346,13 @@ namespace AppVentas.VISTA
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.PictureBox btnNormal;
-        private System.Windows.Forms.PictureBox btnMinimizar;
-        private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.PictureBox btnMaximizar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtBuscarProducto;
     }
 }

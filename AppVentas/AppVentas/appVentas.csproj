@@ -62,6 +62,7 @@
     <Compile Include="DAO\ClsDProductos.cs" />
     <Compile Include="DAO\ClsDRegistroUsuario.cs" />
     <Compile Include="DAO\ClsDUsuarios.cs" />
+    <Compile Include="DAO\ClsDVenta.cs" />
     <Compile Include="MODELO\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

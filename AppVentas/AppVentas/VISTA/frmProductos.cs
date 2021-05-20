@@ -17,12 +17,23 @@ namespace AppVentas.VISTA
         public FrmProductos()
         {
             InitializeComponent();
-            load();
+            cargardatos();
+            
 
 
         }
+        void cargardatos()
+        {
+            var ClsDProductos = new ClsDProductos();
+            dtgProductos.Rows.Clear();
 
-        
+            foreach (var listarDatos in ClsDProductos.MostrarProducto(txtBuscarProducto.Text))
+            {
+                dtgProductos.Rows.Add(listarDatos.idProducto, listarDatos.nombreProducto, listarDatos.precioProducto);
+            }
+
+        }
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -78,19 +89,8 @@ namespace AppVentas.VISTA
         }
         private void dtgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string id = dtgProductos.CurrentRow.Cells[0].Value.ToString();
-            string Nombre = dtgProductos.CurrentRow.Cells[1].Value.ToString();
-            string precio = dtgProductos.CurrentRow.Cells[2].Value.ToString();
+           
 
-
-            //txtProducto.Text = producto;
-            //txtPrecio.Text = precio;
-            //txtEstado.Text = estado;
-
-            FrmMenuVenta.FrmVenta.txtCodigoProducto.Text = id;
-            FrmMenuVenta.FrmVenta.txtNombreProducto.Text = Nombre;
-            FrmMenuVenta.FrmVenta.txtPrecio.Text = precio;
-            
 
         }
 
@@ -103,29 +103,75 @@ namespace AppVentas.VISTA
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+           
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            btnMaximizar.Visible = false;
-            btnNormal.Visible = true;
+            
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+          
         }
 
         private void btnNormal_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            btnNormal.Visible = false;
-            btnMaximizar.Visible = true;
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        void envio()
+        {
+            string id = dtgProductos.CurrentRow.Cells[0].Value.ToString();
+            string Nombre = dtgProductos.CurrentRow.Cells[1].Value.ToString();
+            string precio = dtgProductos.CurrentRow.Cells[2].Value.ToString();
+            
+
+
+            txtEstado.Text = id;
+            txtProducto.Text = Nombre;
+            txtPrecio.Text = precio;
+            
+
+
+
+            //FrmMenuVenta.FrmVenta.txtId.Text = id;
+            //FrmMenuVenta.FrmVenta.txtNombreProducto.Text = Nombre;
+            //FrmMenuVenta.FrmVenta.txtPrecio.Text = precio;
+            //FrmMenuVenta.FrmVenta.txtCantidad.Focus();
+            //this.Close();
+        }
+
+        private void dtgProductos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            envio();
+        }
+
+        private void dtgProductos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                envio();
+            }
+        }
+
+        private void FrmProductos_Load(object sender, EventArgs e)
+        {
+            cargardatos();
+        }
+
+        private void txtBuscarProducto_TextChanged(object sender, EventArgs e)
+        {
+            cargardatos();
+        }
+
+        private void dtgProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

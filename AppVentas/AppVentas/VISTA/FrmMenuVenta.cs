@@ -22,5 +22,10 @@ namespace AppVentas.VISTA
         {
             FrmVenta.Show();
         }
+
+        private void FrmMenuVenta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace AppVentas.VISTA
         }
         public string usu;
 
-        public static FrmVenta FrmVenta = new FrmVenta();
+        public static FrmVenta FrmVentas = new FrmVenta();
 
         public void DesactivarResaltado()
         {
@@ -111,7 +111,7 @@ namespace AppVentas.VISTA
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-           //lblUsuarioIngresado.Text = usu;
+          
         }
 
         private void btbPrincipal_Click(object sender, EventArgs e)
@@ -143,6 +143,7 @@ namespace AppVentas.VISTA
         {
             AbrirFormEnPanel<FrmVenta>();
             BotonActivo(btnVentas);
+            
         }
 
         private void btnDocumentos_Click(object sender, EventArgs e)
