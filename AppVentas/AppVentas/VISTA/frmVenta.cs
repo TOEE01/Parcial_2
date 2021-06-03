@@ -45,21 +45,11 @@ namespace AppVentas.VISTA
             cbCliente.DisplayMember = "nombreCliente";
             cbCliente.ValueMember = "iDCliente";
 
-            if (cbCliente.Items.Count > 0)
-            {
-                cbCliente.SelectedIndex = -1;
-            }
 
             ClsDDocumentos clsD = new ClsDDocumentos();
             cbTipoDocumento.DataSource = clsD.MostrarDocumento();
                 cbTipoDocumento.DisplayMember = "nombreDocumento";
                 cbTipoDocumento.ValueMember = "iDDocumento";
-            if (cbTipoDocumento.Items.Count > 0)
-            {
-                cbTipoDocumento.SelectedIndex = -1;
-            }
-                
-            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -70,54 +60,52 @@ namespace AppVentas.VISTA
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
-            try {
+            calcular();
+        }
+        void calcular()
+        {
+            try
+            {
                 Double precio, cantida, total;
                 cantida = Convert.ToDouble(txtCantidad.Text);
                 precio = Convert.ToDouble(txtPrecio.Text);
-
                 total = precio * cantida;
 
                 txtTotal.Text = total.ToString();
-
-
             }
             catch (Exception ex)
             {
                 if (txtCantidad.Text.Equals(""))
                 {
-                    txtCantidad.Text = "0";
+                    txtCantidad.Text = "1";
                     txtCantidad.SelectAll();
                 }
             }
-         }
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
-            Double suma = 0;
+            calcular();   
             dtgVenta.Rows.Add(txtId.Text, txtNombreProducto.Text,txtPrecio.Text,txtCantidad.Text,txtTotal.Text);
-                
+            Double suma = 0;    
 
-            for (int i= 0;i<dtgVenta.Rows.Count; i++)
+            for (int i= 0; i<dtgVenta.Rows.Count; i++)
             {
                 String datosAOperarTotal = dtgVenta.Rows[i].Cells[4].Value.ToString();
 
                 Double DatosConvertidos = Convert.ToDouble(datosAOperarTotal);
 
-                //variable de acarreo
-                
                 suma += DatosConvertidos;
 
                 txtTotalFinal.Text = suma.ToString();
-                
-                
-                txtId.Clear();
-                txtNombreProducto.Clear();
-                txtPrecio.Clear();
-                txtCantidad.Clear();
-                txtTotal.Clear();
+                limpiar();
 
             }
+            dtgVenta.Refresh();
+            dtgVenta.ClearSelection();
+            int last = dtgVenta.Rows.Count - 1;
+            dtgVenta.FirstDisplayedScrollingRowIndex = last;
+            dtgVenta.Rows[last].Selected = true;
         }
 
         private void txtTotalFinal_TextChanged(object sender, EventArgs e)
@@ -134,5 +122,105 @@ namespace AppVentas.VISTA
         {
 
         }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtBucarProducto.Text.Equals(""))
+            {
+                if (e.KeyChar == 13)
+                {
+                   
+                    btnBuscar.PerformClick();
+                    e.Handled = true;
+                    
+                }
+
+            }
+            else
+            {
+                if (e.KeyChar == 13)
+                {
+                    ClsDProductos prod = new ClsDProductos();
+                    var busqueda = prod.BuscarProducto(Convert.ToInt32(txtBucarProducto.Text));
+                    
+                    if (busqueda.Count < 1)
+                    {
+                        MessageBox.Show("El codigo no existe");
+                        txtBucarProducto.Text = "";
+                    }
+
+                    foreach (var iteracion in busqueda)
+                    {
+                        txtId.Text = iteracion.idProducto.ToString();
+                        txtNombreProducto.Text = iteracion.nombreProducto;
+                        txtPrecio.Text = iteracion.precioProducto.ToString();
+                        txtCantidad.Text = "1";
+                        txtCantidad.Focus();
+                        txtBucarProducto.Text = "";
+                    }
+                }
+            }
+            
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                e.Handled = true;
+                btnAgregar.PerformClick();
+                txtBucarProducto.Focus();
+            }
+            else
+            {
+                e.Handled = true;
+                ClsDProductos cls = new ClsDProductos();
+                var busqueda = cls.BuscarProducto(Convert.ToInt32(txtBucarProducto.Text));
+                
+
+                foreach (var  iteracion in busqueda)
+                {
+                    txtId.Text = iteracion.idProducto.ToString();
+                    txtNombreProducto.Text = iteracion.nombreProducto;
+                    txtPrecio.Text = iteracion.precioProducto.ToString();
+                  
+                    
+                }
+            }
+        }
+
+        private void txtBucarProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGuardarVenta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClsDVenta ventas = new ClsDVenta();
+                tb_venta venta = new tb_venta();
+                venta.iDDocumento = Convert.ToInt32(cbTipoDocumento.SelectedValue.ToString());
+                venta.iDCliente = Convert.ToInt32(cbCliente.SelectedValue.ToString());
+                venta.iDUsuario = 1;
+                venta.totalVenta = Convert.ToDecimal(txtTotalFinal.Text);
+                venta.fecha = Convert.ToDateTime(dtpFecha.Text);
+                ventas.save(venta);
+                MessageBox.Show("Save");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+        }
+        void limpiar()
+        {
+            txtId.Clear();
+            txtNombreProducto.Clear();
+            txtPrecio.Clear();
+            txtCantidad.Clear();
+            txtTotal.Clear();
+        }
     }
+   
 }

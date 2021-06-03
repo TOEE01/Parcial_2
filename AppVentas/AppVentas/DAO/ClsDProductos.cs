@@ -85,5 +85,17 @@ namespace AppVentas.DAO
             return tb_Productos;
         }
 
+
+        public List<tb_producto> BuscarProducto(int Codigo)
+        {
+            List<tb_producto> tb_Productos = new List<tb_producto>();
+            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
+            {
+                tb_Productos = (from listadoProductos in db.tb_producto
+                                where listadoProductos.idProducto == Codigo
+                                select listadoProductos).ToList();
+            }
+            return tb_Productos;
+        }
     }
 }

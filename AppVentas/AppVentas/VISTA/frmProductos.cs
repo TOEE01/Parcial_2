@@ -131,20 +131,20 @@ namespace AppVentas.VISTA
             string id = dtgProductos.CurrentRow.Cells[0].Value.ToString();
             string Nombre = dtgProductos.CurrentRow.Cells[1].Value.ToString();
             string precio = dtgProductos.CurrentRow.Cells[2].Value.ToString();
-            
-
-
-            txtEstado.Text = id;
-            txtProducto.Text = Nombre;
-            txtPrecio.Text = precio;
-            
 
 
 
-            //FrmMenuVenta.FrmVenta.txtId.Text = id;
-            //FrmMenuVenta.FrmVenta.txtNombreProducto.Text = Nombre;
-            //FrmMenuVenta.FrmVenta.txtPrecio.Text = precio;
-            //FrmMenuVenta.FrmVenta.txtCantidad.Focus();
+            //txtEstado.Text = id;
+            //txtProducto.Text = Nombre;
+            //txtPrecio.Text = precio;
+
+
+
+
+            FrmMenuVenta.FrmVenta.txtId.Text = id;
+            FrmMenuVenta.FrmVenta.txtNombreProducto.Text = Nombre;
+            FrmMenuVenta.FrmVenta.txtPrecio.Text = precio;
+            FrmMenuVenta.FrmVenta.txtCantidad.Focus();
             //this.Close();
         }
 

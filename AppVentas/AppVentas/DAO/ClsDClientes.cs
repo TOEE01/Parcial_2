@@ -66,8 +66,6 @@ namespace AppVentas.DAO
                 throw;
             }
         }
-
-
         public List<tb_cliente> MostrarCliente()
         {
             List<tb_cliente> tb_Clientes = new List<tb_cliente>();
@@ -75,7 +73,6 @@ namespace AppVentas.DAO
             {
                 tb_Clientes = db.tb_cliente.ToList();
             }
-
                 return tb_Clientes;
         }
     }
