@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="DAO\ClsAcceso.cs" />
     <Compile Include="DAO\ClsDClientes.cs" />
+    <Compile Include="DAO\ClsDDetalle.cs" />
     <Compile Include="DAO\ClsDDocumentos.cs" />
     <Compile Include="DAO\ClsDProductos.cs" />
     <Compile Include="DAO\ClsDRegistroUsuario.cs" />

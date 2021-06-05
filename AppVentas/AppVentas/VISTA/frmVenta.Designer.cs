@@ -132,6 +132,7 @@ namespace AppVentas.VISTA
             this.dtgVenta.ReadOnly = true;
             this.dtgVenta.Size = new System.Drawing.Size(657, 250);
             this.dtgVenta.TabIndex = 6;
+            this.dtgVenta.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dtgVenta_RowsRemoved);
             // 
             // Column1
             // 

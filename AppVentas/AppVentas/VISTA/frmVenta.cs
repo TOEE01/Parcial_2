@@ -82,14 +82,11 @@ namespace AppVentas.VISTA
                 }
             }
         }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
+        void calculartotal()
         {
-            calcular();   
-            dtgVenta.Rows.Add(txtId.Text, txtNombreProducto.Text,txtPrecio.Text,txtCantidad.Text,txtTotal.Text);
-            Double suma = 0;    
-
-            for (int i= 0; i<dtgVenta.Rows.Count; i++)
+             dtgVenta.Rows.Add(txtId.Text, txtNombreProducto.Text,txtPrecio.Text,txtCantidad.Text,txtTotal.Text);
+            Double suma = 0;  
+            for (int i = 0; i < dtgVenta.Rows.Count; i++)
             {
                 String datosAOperarTotal = dtgVenta.Rows[i].Cells[4].Value.ToString();
 
@@ -101,6 +98,12 @@ namespace AppVentas.VISTA
                 limpiar();
 
             }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            calcular();
+            calculartotal();
             dtgVenta.Refresh();
             dtgVenta.ClearSelection();
             int last = dtgVenta.Rows.Count - 1;
@@ -206,6 +209,20 @@ namespace AppVentas.VISTA
                 venta.totalVenta = Convert.ToDecimal(txtTotalFinal.Text);
                 venta.fecha = Convert.ToDateTime(dtpFecha.Text);
                 ventas.save(venta);
+                ClsDDetalle clsD = new ClsDDetalle();
+                tb_detalleVenta tbDetalle = new tb_detalleVenta();
+                foreach (DataGridViewRow dtgV in dtgVenta.Rows)
+                {
+                    tbDetalle.iDVenta = Convert.ToInt32(txtVenta.Text);
+                    tbDetalle.iDProducto = Convert.ToInt32(dtgV.Cells[0].Value.ToString());
+                    tbDetalle.cantidad = Convert.ToInt32(dtgV.Cells[3].Value.ToString());
+                    tbDetalle.precio = Convert.ToDecimal(dtgV.Cells[2].Value.ToString());
+                    tbDetalle.total = Convert.ToDecimal(dtgV.Cells[4].Value.ToString());
+                }
+
+                UltimoCorrelativoDeVenta();
+                dtgVenta.Rows.Clear();
+                txtTotalFinal.Text = "";
                 MessageBox.Show("Save");
             }
             catch(Exception ex)
@@ -220,6 +237,12 @@ namespace AppVentas.VISTA
             txtPrecio.Clear();
             txtCantidad.Clear();
             txtTotal.Clear();
+        }
+
+        private void dtgVenta_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            //va a detectar cuando nosotros eliminamos una linea del datagridview
+            calculartotal();
         }
     }
    
