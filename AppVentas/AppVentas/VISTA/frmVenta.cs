@@ -211,6 +211,7 @@ namespace AppVentas.VISTA
                 ventas.save(venta);
                 ClsDDetalle clsD = new ClsDDetalle();
                 tb_detalleVenta tbDetalle = new tb_detalleVenta();
+                
                 foreach (DataGridViewRow dtgV in dtgVenta.Rows)
                 {
                     tbDetalle.iDVenta = Convert.ToInt32(txtVenta.Text);

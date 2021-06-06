@@ -15,6 +15,12 @@ namespace AppVentas.DAO
             {
                 tb_detalleVenta detalleVenta = new tb_detalleVenta();
                 detalleVenta.iDVenta = dtalle.iDVenta;
+                detalleVenta.iDProducto = dtalle.iDProducto;
+                detalleVenta.cantidad = dtalle.cantidad;
+                detalleVenta.precio = dtalle.precio;
+                detalleVenta.total = dtalle.total;
+                db.tb_detalleVenta.Add(detalleVenta);
+                db.SaveChanges();
 
             }
         }
